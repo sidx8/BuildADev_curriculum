@@ -1,11 +1,11 @@
 {
-  "title": "Next.js Starter Blog",
-  "author": "Tails Azimuth",
-  "headerTitle": "TailwindBlog",
-  "description": "A blog created with Next.js and Tailwind.css",
+  "title": "Build A Dev",
+  "author": "Hussam Shah",
+  "headerTitle": "Build A Dev",
+  "description": "Data Structrue and Algorithms Curriculum",
   "language": "en-us",
-  "siteUrl": "https://tailwind-nextjs-starter-blog.vercel.app",
-  "siteRepo": "https://github.com/timlrx/tailwind-nextjs-starter-blog",
+  "siteUrl": "https://curriculum-dusky.vercel.app/",
+  "siteRepo": "#",
   "image": "/static/images/avatar.png",
   "socialBanner": "/static/images/twitter-card.png",
   "email": "address@yoursite.com",
@@ -13,6 +13,6 @@
   "twitter": "https://twitter.com/Twitter",
   "facebook": "https://facebook.com",
   "youtube": "https://youtube.com",
-  "linkedin": "https://www.linkedin.com",
+  "linkedin": "https://www.linkedin.com/company/buildadev",
   "locale": "en-US"
 }
