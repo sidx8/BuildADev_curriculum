@@ -21,10 +21,10 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
     <SectionContainer>
       <BlogSeo url={`${siteMetadata.siteUrl}/blog/${slug}`} {...frontMatter} />
       <article>
-        <div className="xl:divide-y xl:divide-gray-200 xl:dark:divide-gray-700">
+        <div className="xl:divide-y p-10 shadow-md bg-white dark:bg-code-flatblack xl:divide-gray-200 xl:dark:divide-gray-700">
           <header className="pt-6 xl:pb-6">
             <div className="space-y-1 text-center">
-              <dl className="space-y-10">
+              {/* <dl className="space-y-10">
                 <div>
                   <dt className="sr-only">Published on</dt>
                   <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
@@ -33,7 +33,7 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
                     </time>
                   </dd>
                 </div>
-              </dl>
+              </dl> */}
               <div>
                 <PageTitle>{title}</PageTitle>
               </div>
@@ -78,13 +78,13 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
             </dl> */}
             <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:pb-0 xl:col-span-3 xl:row-span-2">
               <div className="pt-10 pb-8 prose dark:prose-dark max-w-none">{children}</div>
-              <div className="pt-6 pb-6 text-sm text-gray-700 dark:text-gray-300">
+              {/* <div className="pt-6 pb-6 text-sm text-gray-700 dark:text-gray-300">
                 <Link href={discussUrl(slug)} rel="nofollow">
                   {'Discuss on Twitter'}
                 </Link>
                 {` • `}
                 <Link href={editUrl(fileName)}>{'View on GitHub'}</Link>
-              </div>
+              </div> */}
             </div>
             <footer>
               <div className="text-sm font-medium leading-5 divide-gray-200 xl:divide-y dark:divide-gray-700 xl:col-start-1 xl:row-start-2">

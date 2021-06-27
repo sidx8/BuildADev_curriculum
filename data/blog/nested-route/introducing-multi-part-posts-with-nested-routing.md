@@ -1,6 +1,7 @@
 ---
 title: Data Types in JavaScript
 date: '2021-05-02'
+logo: '/static/images/web.png'
 tags: ['JavaScript', 'Data Structure', 'Beginner']
 draft: false
 summary: 'We have all heard of this term somewhere or the other but what actually are Data types and why do we even need them in the first place?
@@ -10,7 +11,12 @@ summary: 'We have all heard of this term somewhere or the other but what actuall
 # Basics
 
 We have all heard of this term somewhere or the other but what actually are Data types and why do we even need them in the first place?
-![Thinking](https://static.vecteezy.com/system/resources/previews/001/184/158/original/young-woman-thinking-between-two-choices-vector.jpg)
+
+<div align="center">
+
+![Thinking](https://www.fluentu.com/blog/wp-content/uploads/2016/09/thinking-in-a-foreign-language-e1479154410182.png)
+
+</div>
 
 A Data type or simply type is an attribute(property) of data that tells the compiler or interpreter how the programmers like us intend to use the data.
 Basically, they convey what we want to the compiler or interpreter.
@@ -31,6 +37,8 @@ Both these categories are further divided into various categories and we will ha
 ![Data Types In Js](https://csharpcorner-mindcrackerinc.netdna-ssl.com/article/datatypes-in-javascript/Images/Presentation20.jpg)
 
 ## Some Characteristics of Javascript
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeVghze86gBQaAZRHlNU8VEdGvSgjQyDeWmtt8QPALNhI5_7g/viewform?embedded=true"  style={{ width : '100%', height : '600px'}} frameBorder="0" marginHeight="0" marginWidth="0">Loading…</iframe>
 
 But before understanding data type in detail, let us understand some major characteristics of Javascript.
 

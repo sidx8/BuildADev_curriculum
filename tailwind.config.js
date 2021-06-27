@@ -28,6 +28,8 @@ module.exports = {
           red: '#ff8383',
           blue: '#93ddfd',
           white: '#fff',
+          blackbg: '#2F2F2F',
+          flatblack: '#171717',
         },
       },
       typography: (theme) => ({

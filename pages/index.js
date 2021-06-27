@@ -21,7 +21,7 @@ export default function Home({ posts }) {
         description={siteMetadata.description}
         url={siteMetadata.siteUrl}
       />
-      <div className="divide-y divide-gray-200 dark:divide-gray-700">
+      <div className="divide-y divide-gray-300 dark:divide-gray-700">
         <div className="pt-6 pb-8 space-y-2 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             Modules
@@ -30,12 +30,15 @@ export default function Home({ posts }) {
             {siteMetadata.description}
           </p>
         </div>
-        <ul className="divide-y divide-gray-200 dark:divide-gray-700">
+        <ul>
           {!posts.length && 'No posts found.'}
           {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
-            const { slug, date, title, summary, tags } = frontMatter
+            const { slug, date, title, summary, tags, logo } = frontMatter
             return (
-              <li key={slug} className="py-12">
+              <li
+                key={slug}
+                className="bg-white dark:bg-code-flatblack rounded shadow-md my-5 px-5 py-8"
+              >
                 <article>
                   <div className="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline">
                     <dl>
@@ -68,12 +71,13 @@ export default function Home({ posts }) {
                         </div>
                       </div>
                       <div className="text-base font-medium leading-6">
-                        <Link
-                          href={`/blog/${slug}`}
-                          className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400"
-                          aria-label={`Read "${title}"`}
-                        >
-                          Read more &rarr;
+                        <Link href={`/blog/${slug}`} aria-label={`Read "${title}"`}>
+                          <button
+                            type="submit"
+                            className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                          >
+                            Start &rarr;
+                          </button>
                         </Link>
                       </div>
                     </div>
