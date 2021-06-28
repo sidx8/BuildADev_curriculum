@@ -1,6 +1,7 @@
 import Link from '@/components/Link'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
+import Image from 'next/image'
 import { useState } from 'react'
 import Pagination from '@/components/Pagination'
 
@@ -51,18 +52,16 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
         <ul>
           {!filteredBlogPosts.length && 'No posts found.'}
           {displayPosts.map((frontMatter) => {
-            const { slug, date, title, summary, tags } = frontMatter
+            const { slug, date, title, summary, tags, logo } = frontMatter
             return (
-              <li key={slug} className="bg-white my-4 shadow rounded px-4 py-4">
+              <li
+                key={slug}
+                className="bg-white dark:bg-code-flatblack my-4 shadow rounded px-4 py-4"
+              >
                 <article className="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline">
-                  <dl>
-                    <dt className="sr-only">Published on</dt>
-                    <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                      <time dateTime={date}>
-                        {new Date(date).toLocaleDateString(siteMetadata.locale, postDateTemplate)}
-                      </time>
-                    </dd>
-                  </dl>
+                  <div className="my-auto mx-auto">
+                    <Image src={logo} width="110" height="110" alt="Picture of the author" />
+                  </div>
                   <div className="space-y-3 xl:col-span-3">
                     <div>
                       <h3 className="text-2xl font-bold leading-8 tracking-tight">

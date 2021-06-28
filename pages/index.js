@@ -1,12 +1,10 @@
 import Link from '@/components/Link'
 import { PageSeo } from '@/components/SEO'
-import Tag from '@/components/Tag'
 import Image from 'next/image'
 import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 
 const MAX_DISPLAY = 5
-const postDateTemplate = { year: 'numeric', month: 'long', day: 'numeric' }
 
 export async function getStaticProps() {
   const posts = await getAllFilesFrontMatter('blog')
@@ -22,13 +20,14 @@ export default function Home({ posts }) {
         description={siteMetadata.description}
         url={siteMetadata.siteUrl}
       />
-      <div className="divide-y divide-gray-300 dark:divide-gray-700">
+      <div className="divide-y  divide-gray-300 dark:divide-gray-700">
         <div className="pt-6 pb-8 space-y-2 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            Modules
+          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
+            Data Structrue and Algorithms
           </h1>
-          <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            {siteMetadata.description}
+          <p className="text-lg leading-7 text-gray-700 dark:text-gray-300">
+            Learn the basics of web development, including programming languages and tools, and web
+            accessibility.
           </p>
         </div>
         <ul>
@@ -44,7 +43,6 @@ export default function Home({ posts }) {
                   <div className="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline">
                     <div className="my-auto mx-auto">
                       <Image src={logo} width="110" height="110" alt="Picture of the author" />
-                      {console.log(logo)}
                     </div>
                     <div className="space-y-5 xl:col-span-3">
                       <div className="space-y-6">
