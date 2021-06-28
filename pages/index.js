@@ -1,6 +1,7 @@
 import Link from '@/components/Link'
 import { PageSeo } from '@/components/SEO'
 import Tag from '@/components/Tag'
+import Image from 'next/image'
 import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 
@@ -41,14 +42,10 @@ export default function Home({ posts }) {
               >
                 <article>
                   <div className="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline">
-                    <dl>
-                      <dt className="sr-only">Published on</dt>
-                      <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                        <time dateTime={date}>
-                          {new Date(date).toLocaleDateString(siteMetadata.locale, postDateTemplate)}
-                        </time>
-                      </dd>
-                    </dl>
+                    <div className="my-auto mx-auto">
+                      <Image src={logo} width="110" height="110" alt="Picture of the author" />
+                      {console.log(logo)}
+                    </div>
                     <div className="space-y-5 xl:col-span-3">
                       <div className="space-y-6">
                         <div>
@@ -60,13 +57,11 @@ export default function Home({ posts }) {
                               {title}
                             </Link>
                           </h2>
-                          <div className="flex flex-wrap">
-                            {tags.map((tag) => (
-                              <Tag key={tag} text={tag} />
-                            ))}
+                          <div className="flex flex-wrap prose text-gray-500 font-semibold max-w-none dark:text-gray-400">
+                            20 min
                           </div>
                         </div>
-                        <div className="prose text-gray-500 max-w-none dark:text-gray-400">
+                        <div className="prose text-gray-700 max-w-none dark:text-gray-400">
                           {summary}
                         </div>
                       </div>

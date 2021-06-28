@@ -1,7 +1,7 @@
 ---
 title: Data Types in JavaScript
 date: '2021-05-02'
-logo: '/static/images/web.png'
+logo: '/static/images/code.png'
 tags: ['JavaScript', 'Data Structure', 'Beginner']
 draft: false
 summary: 'We have all heard of this term somewhere or the other but what actually are Data types and why do we even need them in the first place?
