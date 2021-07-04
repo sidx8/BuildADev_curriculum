@@ -11,7 +11,7 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
     <SectionContainer>
       <BlogSeo url={`${siteMetadata.siteUrl}/blog/${slug}`} {...frontMatter} />
       <article>
-        <div className="xl:divide-y p-10 shadow-md bg-white dark:bg-code-flatblack xl:divide-gray-200 xl:dark:divide-gray-700">
+        <div className="xl:divide-y mt-20 p-10 shadow-md bg-white dark:bg-code-flatblack xl:divide-gray-200 xl:dark:divide-gray-700">
           <header className="pt-6 xl:pb-6">
             <PageTitle>{title}</PageTitle>
           </header>
@@ -29,20 +29,35 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
                     {prev && (
                       <div>
                         <h2 className="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400">
-                          Previous Module
+                          Next Module
                         </h2>
                         <div className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400">
-                          <Link href={`/blog/${prev.slug}`}>{prev.title}</Link>
+                          <Link href={`/blog/${prev.slug}`}>
+                            {' '}
+                            <button
+                              type="submit"
+                              className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                            >
+                              {prev.title} &rarr;
+                            </button>
+                          </Link>
                         </div>
                       </div>
                     )}
                     {next && (
                       <div>
                         <h2 className="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400">
-                          Next Module
+                          Previous Module
                         </h2>
                         <div className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400">
-                          <Link href={`/blog/${next.slug}`}>{next.title}</Link>
+                          <Link href={`/blog/${next.slug}`}>
+                            <button
+                              type="submit"
+                              className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                            >
+                              {next.title} &rarr;
+                            </button>
+                          </Link>
                         </div>
                       </div>
                     )}

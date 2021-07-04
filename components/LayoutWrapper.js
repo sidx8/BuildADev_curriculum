@@ -10,17 +10,17 @@ import Image from 'next/image'
 
 const LayoutWrapper = ({ children }) => {
   return (
-    <SectionContainer>
+    <div className="w-full mb-10">
       <div className="flex flex-col justify-between h-screen">
-        <header className="flex items-center justify-between py-10">
-          <div>
+        <header className="px-12 md:px-20 flex items-center justify-between bg-white dark:bg-code-flatblack py-5">
+          <div className="">
             <Link href="/" aria-label="Build A Dev">
               <div className="flex items-center justify-between">
                 <div className="mr-3">
                   <Image
                     src="/static/images/logo.png"
-                    width="200"
-                    height="55"
+                    width="90"
+                    height="42"
                     alt="Picture of the author"
                   />
                   {/* <Logo /> */}
@@ -48,13 +48,15 @@ const LayoutWrapper = ({ children }) => {
               ))}
             </div>
             <ThemeSwitch />
-            <MobileNav />
+            {/* <MobileNav /> */}
           </div>
         </header>
         <main className="mb-auto">{children}</main>
-        <Footer />
+        <SectionContainer>
+          <Footer />
+        </SectionContainer>
       </div>
-    </SectionContainer>
+    </div>
   )
 }
 

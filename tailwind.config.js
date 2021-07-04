@@ -6,6 +6,18 @@ module.exports = {
   purge: ['./pages/**/*.js', './components/**/*.js', './layouts/**/*.js', './lib/**/*.js'],
   darkMode: 'class',
   theme: {
+    fontWeight: {
+      hairline: 100,
+      thin: 200,
+      light: 300,
+      normal: 400,
+      medium: 500,
+      semimedium: 550,
+      semibold: 600,
+      bold: 700,
+      extrabold: 800,
+      black: 900,
+    },
     extend: {
       spacing: {
         '9/16': '56.25%',
